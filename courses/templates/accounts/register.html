@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid page-header" style="margin-bottom: 90px;">
+    <div class="container">
+        <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+            <h3 class="display-4 text-white text-uppercase">Register</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'courses:index' %}">Home</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">Register</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Register Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="bg-secondary p-5">
+                    <h2 class="text-primary text-center mb-4">Create New Account</h2>
+
+                    <div>
+                        {% for message in messages %}
+                            {% if 'error' in message.tags %}
+                                <li style="color: red">{{ message }}</li>
+                            {% elif 'success' in message.tags %}
+                                <li style="color: green">{{ message }}</li>
+                            {% endif %}
+
+                        {% endfor %}
+
+                        {% if form.errors %}
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger">
+                                        <strong>{{ error|escape }}</strong>
+                                    </div>
+                                {% endfor %}
+                            {% endfor %}
+                            {% for error in form.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <!-- Register Form -->
+                    <form method="post" action="{% url 'accounts:register' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control border-0" placeholder="Username" required>
+                            <div class="invalid-feedback">
+                                Please choose a username.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control border-0" placeholder="Email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="form-group d-flex gap-3">
+                            <div class="flex-fill">
+                                <input type="password" name="password1" class="form-control border-0" placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Please enter a password.
+                                </div>
+                            </div>
+
+                            <div class="flex-fill">
+                                <input type="password" name="password2" class="form-control border-0" placeholder="Confirm Password" required>
+                                <div class="invalid-feedback">
+                                    Please confirm your password.
+                                </div>
+                            </div>
+                        </div>
+
+
+<!--                        <div class="form-group">-->
+<!--                            <div class="custom-control custom-checkbox">-->
+<!--                                <input type="checkbox" class="custom-control-input" id="agreeTerms" required>-->
+<!--                                <label class="custom-control-label" for="agreeTerms">-->
+<!--                                    I agree to the <a href="#" class="text-primary">Terms & Conditions</a>-->
+<!--                                </label>-->
+<!--                                <div class="invalid-feedback">-->
+<!--                                    You must agree to the Terms & Conditions.-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <button type="submit" class="btn btn-primary btn-block py-3">Register Now</button>
+
+                        {% if form.errors %}
+                        <div class="alert alert-danger mt-3">
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    {{ error }}<br>
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </form>
+
+
+                    <div class="mb-4 mt-4">
+                        <button class="btn btn-block mb-3" style="background-color: #db4437; color: white;">
+                            <i class="fab fa-google mr-2"></i>Register with Google
+                        </button>
+                        <button class="btn btn-block mb-3" style="background-color: #1877f2; color: white;">
+                            <i class="fab fa-facebook-f mr-2"></i>Register with Facebook
+                        </button>
+                        <button class="btn btn-block mb-3" style="background-color: #1da1f2; color: white;">
+                            <i class="fab fa-twitter mr-2"></i>Register with Twitter
+                        </button>
+                    </div>
+
+
+                    <div class="text-center mt-4">
+                        <p class="mb-0">Already have an account? <a href="{% url 'accounts:login' %}" class="text-primary">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register End -->
+{% endblock %}

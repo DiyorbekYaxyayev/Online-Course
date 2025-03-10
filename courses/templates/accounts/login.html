@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Header Start -->
+<div class="container-fluid page-header" style="margin-bottom: 90px;">
+    <div class="container">
+        <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+            <h3 class="display-4 text-white text-uppercase">Login</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'courses:index' %}">Home</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">Login</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<!-- Login Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="bg-secondary p-5">
+                    <h2 class="text-primary text-center mb-4">Login to Your Account</h2>
+
+                    <!-- Social Login -->
+                    <div class="mb-4">
+                        <button class="btn btn-block btn-outline-primary mb-2">
+                            <i class="fab fa-google mr-2"></i>Login with Google
+                        </button>
+                        <button class="btn btn-block btn-outline-primary mb-2">
+                            <i class="fab fa-facebook-f mr-2"></i>Login with Facebook
+                        </button>
+                    </div>
+
+                    <div class="text-center mb-4">
+                        <span class="bg-secondary px-3">OR</span>
+                    </div>
+
+                    <div>
+                        {% for message in messages %}
+                            {% if 'error' in message.tags %}
+                                <li style="color: red">{{ message }}</li>
+                            {% elif 'success' in message.tags %}
+                                <li style="color: green">{{ message }}</li>
+                            {% endif %}
+
+                        {% endfor %}
+
+                        {% if form.errors %}
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <div class="alert alert-danger">
+                                        <strong>{{ error|escape }}</strong>
+                                    </div>
+                                {% endfor %}
+                            {% endfor %}
+                            {% for error in form.non_field_errors %}
+                                <div class="alert alert-danger">
+                                    <strong>{{ error|escape }}</strong>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <!-- Login Form -->
+                    <form method="post" action="{% url 'accounts:login' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control border-0" placeholder="Email" required
+                                   value="{{ form.username.value|default:'' }}">
+                            <div class="invalid-feedback">
+                                Please enter your email.
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control border-0" placeholder="Password" required>
+                            <div class="invalid-feedback">
+                                Please enter your password.
+                            </div>
+                        </div>
+
+                        <div class="form-group d-flex justify-content-between">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="rememberMe" name="remember_me">
+                                <label class="custom-control-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="{% url 'accounts:register' %}" class="text-primary">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block py-3">Login Now</button>
+
+                        {% if form.errors %}
+                        <div class="alert alert-danger mt-3">
+                            {% for field in form %}
+                                {% for error in field.errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </form>
+
+
+                    <div class="text-center mt-4">
+                        <p class="mb-0">Don't have an account? <a href="{% url 'accounts:register' %}" class="text-primary">Register Now</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Login End -->
+{% endblock %}

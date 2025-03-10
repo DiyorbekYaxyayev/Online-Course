@@ -1,0 +1,550 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- Header Start -->
+    <div class="container-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
+                <h3 class="display-4 text-white text-uppercase">Course Detail</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="index.html">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase"><a class="text-white" href="course.html">Courses</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">Course Detail</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Course Detail Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Course Content -->
+                <div class="col-lg-8">
+                    <div class="mb-5">
+                        <h1 class="mb-4">Web Design & Development Course for Beginners</h1>
+                        <div class="mb-4 d-flex">
+                            <div class="mr-4">
+                                <i class="fa fa-users text-primary mr-2"></i>
+                                <span>25 Students</span>
+                            </div>
+                            <div class="mr-4">
+                                <i class="far fa-clock text-primary mr-2"></i>
+                                <span>10h 30m</span>
+                            </div>
+                            <div class="mr-4">
+                                <i class="fa fa-star text-primary mr-2"></i>
+                                <span>4.5 (250 Ratings)</span>
+                            </div>
+                        </div>
+                        <img class="img-fluid rounded w-100 mb-4" src="img/course-1.jpg" alt="Course Image">
+                        <p>Learn web design and development from scratch. This comprehensive course covers HTML, CSS, JavaScript, and modern frameworks to help you build responsive and attractive websites. Perfect for beginners with no prior experience.</p>
+
+                        <!-- Course Description Tabs -->
+                        <ul class="nav nav-tabs mb-4" id="courseTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="curriculum-tab" data-toggle="tab" href="#curriculum" role="tab">Curriculum</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="instructor-tab" data-toggle="tab" href="#instructor" role="tab">Instructor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="courseTabContent">
+                            <!-- Description Tab -->
+                            <div class="tab-pane fade show active" id="description" role="tabpanel">
+                                <h3 class="mb-3">Course Description</h3>
+                                <p>This comprehensive web development course is designed for absolute beginners who want to learn how to build modern, responsive websites from scratch. You'll start with the fundamentals of HTML and CSS, then progress to JavaScript programming, and finally learn how to use popular frameworks to speed up your development process.</p>
+
+                                <h4 class="mb-3 mt-5">What You'll Learn</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-transparent"><i class="fa fa-check text-primary mr-2"></i>HTML5 structure and semantics</li>
+                                            <li class="list-group-item bg-transparent"><i class="fa fa-check text-primary mr-2"></i>CSS3 styling and animations</li>
+                                            <li class="list-group-item bg-transparent"><i class="fa fa-check text-primary mr-2"></i>JavaScript fundamentals</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bg-transparent"><i class="fa fa-check text-primary mr-2"></i>Responsive design principles</li>
+                                            <li class="list-group-item bg-transparent"><i class="fa fa-check text-primary mr-2"></i>Bootstrap framework</li>
+                                            <li class="list-group-item bg-transparent"><i class="fa fa-check text-primary mr-2"></i>Building real-world projects</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Curriculum Tab -->
+                            <div class="tab-pane fade" id="curriculum" role="tabpanel">
+                                <h3 class="mb-4">Course Curriculum</h3>
+
+                                <!-- Module 1 -->
+                                <div class="accordion mb-3" id="module1">
+                                    <div class="card border-0">
+                                        <div class="card-header bg-secondary d-flex justify-content-between align-items-center">
+                                            <a class="text-dark" data-toggle="collapse" href="#module1Content">
+                                                <h5 class="mb-0">Module 1: HTML Fundamentals</h5>
+                                            </a>
+                                            <span class="badge badge-primary">4 Lessons</span>
+                                        </div>
+                                        <div id="module1Content" class="collapse show" data-parent="#module1">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>Introduction to HTML</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">15:30</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>HTML Document Structure</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">22:15</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>HTML Elements and Attributes</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">18:45</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>HTML Forms and Input Types</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">25:10</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 2 -->
+                                <div class="accordion mb-3" id="module2">
+                                    <div class="card border-0">
+                                        <div class="card-header bg-secondary d-flex justify-content-between align-items-center">
+                                            <a class="text-dark collapsed" data-toggle="collapse" href="#module2Content">
+                                                <h5 class="mb-0">Module 2: CSS Styling</h5>
+                                            </a>
+                                            <span class="badge badge-primary">3 Lessons</span>
+                                        </div>
+                                        <div id="module2Content" class="collapse" data-parent="#module2">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>CSS Selectors and Properties</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">20:45</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>CSS Box Model and Layout</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">19:30</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>CSS Flexbox and Grid</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">23:15</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Module 3 -->
+                                <div class="accordion" id="module3">
+                                    <div class="card border-0">
+                                        <div class="card-header bg-secondary d-flex justify-content-between align-items-center">
+                                            <a class="text-dark collapsed" data-toggle="collapse" href="#module3Content">
+                                                <h5 class="mb-0">Module 3: JavaScript Basics</h5>
+                                            </a>
+                                            <span class="badge badge-primary">3 Lessons</span>
+                                        </div>
+                                        <div id="module3Content" class="collapse" data-parent="#module3">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>JavaScript Syntax and Variables</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">21:20</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center border-bottom py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>DOM Manipulation</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">24:50</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center py-3">
+                                                    <div>
+                                                        <i class="fa fa-play-circle text-primary mr-2"></i>
+                                                        <span>Event Handling</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-muted mr-3">18:35</span>
+                                                        <a href="#" class="btn btn-sm btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ" data-target="#videoModal">Watch</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Instructor Tab -->
+                            <div class="tab-pane fade" id="instructor" role="tabpanel">
+                                <h3 class="mb-4">Course Instructor</h3>
+                                <div class="d-flex align-items-center mb-4">
+                                    <img class="rounded-circle" src="img/team-1.jpg" alt="Instructor" style="width: 100px; height: 100px; object-fit: cover;">
+                                    <div class="ml-4">
+                                        <h4>John Smith</h4>
+                                        <p class="mb-2">Web Development Expert</p>
+                                        <div class="d-flex">
+                                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>John Smith is a seasoned web developer with over 10 years of experience in the industry. He has worked with numerous startups and Fortune 500 companies, helping them build robust and scalable web applications. John is passionate about teaching and has helped thousands of students launch their careers in web development.</p>
+                                <div class="row mt-4">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="bg-secondary p-4 text-center">
+                                            <h5>10+ Years</h5>
+                                            <p class="m-0">Experience</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="bg-secondary p-4 text-center">
+                                            <h5>50+ Courses</h5>
+                                            <p class="m-0">Created</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="bg-secondary p-4 text-center">
+                                            <h5>10,000+</h5>
+                                            <p class="m-0">Students</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Reviews Tab -->
+                            <div class="tab-pane fade" id="reviews" role="tabpanel">
+                                <h3 class="mb-4">Student Reviews</h3>
+                                <div class="mb-5">
+                                    <div class="d-flex align-items-center mb-4">
+                                        <div class="d-flex align-items-center">
+                                            <h1 class="display-4 font-weight-bold m-0">4.5</h1>
+                                            <div class="ml-3">
+                                                <div>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-alt text-primary"></i>
+                                                </div>
+                                                <p class="m-0">250 Reviews</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Review Distribution -->
+                                    <div class="mb-4">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="mr-3">5 Stars</span>
+                                            <div class="progress flex-grow-1" style="height: 10px;">
+                                                <div class="progress-bar bg-primary" style="width: 70%;" role="progressbar"></div>
+                                            </div>
+                                            <span class="ml-3">70%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="mr-3">4 Stars</span>
+                                            <div class="progress flex-grow-1" style="height: 10px;">
+                                                <div class="progress-bar bg-primary" style="width: 20%;" role="progressbar"></div>
+                                            </div>
+                                            <span class="ml-3">20%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="mr-3">3 Stars</span>
+                                            <div class="progress flex-grow-1" style="height: 10px;">
+                                                <div class="progress-bar bg-primary" style="width: 5%;" role="progressbar"></div>
+                                            </div>
+                                            <span class="ml-3">5%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="mr-3">2 Stars</span>
+                                            <div class="progress flex-grow-1" style="height: 10px;">
+                                                <div class="progress-bar bg-primary" style="width: 3%;" role="progressbar"></div>
+                                            </div>
+                                            <span class="ml-3">3%</span>
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <span class="mr-3">1 Star</span>
+                                            <div class="progress flex-grow-1" style="height: 10px;">
+                                                <div class="progress-bar bg-primary" style="width: 2%;" role="progressbar"></div>
+                                            </div>
+                                            <span class="ml-3">2%</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Individual Reviews -->
+                                    <div class="review-list">
+                                        <!-- Review 1 -->
+                                        <div class="media border-bottom pb-4 mb-4">
+                                            <img src="img/user.jpg" class="img-fluid rounded-circle mr-3" style="width: 45px;" alt="User">
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                                    <small class="text-muted">3 weeks ago</small>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                </div>
+                                                <p>This course exceeded my expectations! The instructor explains complex concepts in a way that's easy to understand. I went from knowing nothing about web development to building my own portfolio website in just a few weeks.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Review 2 -->
+                                        <div class="media border-bottom pb-4 mb-4">
+                                            <img src="img/user.jpg" class="img-fluid rounded-circle mr-3" style="width: 45px;" alt="User">
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h6 class="mb-0">Michael Brown</h6>
+                                                    <small class="text-muted">1 month ago</small>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="far fa-star text-primary"></i>
+                                                </div>
+                                                <p>Great course for beginners! The content is well-structured and the projects are practical. I would have liked more advanced JavaScript topics, but overall it's a solid foundation for anyone starting out.</p>
+                                            </div>
+                                        </div>
+
+                                        <!-- Review 3 -->
+                                        <div class="media">
+                                            <img src="img/user.jpg" class="img-fluid rounded-circle mr-3" style="width: 45px;" alt="User">
+                                            <div class="media-body">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <h6 class="mb-0">Emily Chen</h6>
+                                                    <small class="text-muted">2 months ago</small>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star text-primary"></i>
+                                                    <i class="fa fa-star-half-alt text-primary"></i>
+                                                </div>
+                                                <p>I've tried several web development courses, and this one stands out for its clarity and hands-on approach. The instructor is knowledgeable and responsive to questions. Highly recommended for anyone looking to break into web development!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Add Review Form -->
+                                <div id="reviewForm" class="login-required-content">
+                                    <h4 class="mb-4">Leave a Review</h4>
+                                    <p class="text-muted mb-4">Your email address will not be published. Required fields are marked *</p>
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="rating">Your Rating *</label>
+                                            <div class="rating-stars mb-3">
+                                                <i class="far fa-star rating-star" data-value="1"></i>
+                                                <i class="far fa-star rating-star" data-value="2"></i>
+                                                <i class="far fa-star rating-star" data-value="3"></i>
+                                                <i class="far fa-star rating-star" data-value="4"></i>
+                                                <i class="far fa-star rating-star" data-value="5"></i>
+                                                <input type="hidden" id="rating" name="rating" value="0">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="review">Your Review *</label>
+                                            <textarea id="review" class="form-control" rows="5" required></textarea>
+                                        </div>
+                                        <div class="form-group mb-0">
+                                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Login Required Message -->
+                                <div id="loginRequired" class="text-center py-5 d-none">
+                                    <h5 class="mb-4">You need to be logged in to leave a review</h5>
+                                    <a href="login.html" class="btn btn-primary">Login Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Sidebar -->
+                <div class="col-lg-4 mt-5 mt-lg-0">
+                    <!-- Course Features -->
+                    <div class="bg-secondary mb-5 py-4 px-4">
+                        <h2 class="mb-4">Course Features</h2>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Duration</span>
+                            <span>10h 30m</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Lectures</span>
+                            <span>10</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Quizzes</span>
+                            <span>5</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Skill Level</span>
+                            <span>Beginner</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Language</span>
+                            <span>English</span>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-2">
+                            <span>Certificate</span>
+                            <span>Yes</span>
+                        </div>
+                        <div class="d-flex justify-content-between pt-2">
+                            <span>Access</span>
+                            <span>Lifetime</span>
+                        </div>
+                        <div class="py-4">
+                            <a href="#" class="btn btn-block btn-primary py-3">Enroll Now</a>
+                        </div>
+                        <div class="text-center">
+                            <p class="mb-0">Price: <span class="text-primary font-weight-bold">$99</span></p>
+                        </div>
+                    </div>
+
+                    <!-- Related Courses -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Related Courses</h2>
+                        <div class="rounded overflow-hidden mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/course-2.jpg" alt="">
+                                </div>
+                                <div class="col-8 p-3 bg-secondary">
+                                    <h5>JavaScript Masterclass</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="fa fa-star text-primary mr-1"></i>4.7</span>
+                                        <span>$89</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded overflow-hidden mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/course-3.jpg" alt="">
+                                </div>
+                                <div class="col-8 p-3 bg-secondary">
+                                    <h5>React.js for Beginners</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="fa fa-star text-primary mr-1"></i>4.8</span>
+                                        <span>$109</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded overflow-hidden">
+                            <div class="row no-gutters">
+                                <div class="col-4">
+                                    <img class="img-fluid" src="img/course-4.jpg" alt="">
+                                </div>
+                                <div class="col-8 p-3 bg-secondary">
+                                    <h5>Responsive Web Design</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span><i class="fa fa-star text-primary mr-1"></i>4.6</span>
+                                        <span>$79</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Course Detail End -->
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Course Video</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="/placeholder.svg" id="videoPlayer" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
