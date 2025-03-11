@@ -10,6 +10,8 @@ class BlogListView(View):
     def get(self, request):
         blogs = Blog.objects.all()
 
+        
+
         context = {
             'blogs': blogs
         }

@@ -14,6 +14,9 @@ class UserManager(BaseUserManager):
             **extra_fields
         )
 
+
+
+
         user.set_password(password)
         user.save()
         return user

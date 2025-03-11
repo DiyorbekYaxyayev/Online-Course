@@ -8,9 +8,12 @@ class Loginform(forms.Form):
     email = forms.EmailField()
     password = forms.CharField()
 
+
+
     def clean_email(self):
         email = self.cleaned_data['email']
         if not email:
+            
             raise forms.ValidationError('Email Cannot be None')
         if not User.objects.filter(email=email).exists():
             raise forms.ValidationError('User not Found')

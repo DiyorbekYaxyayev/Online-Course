@@ -14,6 +14,8 @@ class Blog(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=255, unique=True, blank=True)
 
+
+
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.title)
@@ -31,3 +33,6 @@ class BlogComment(models.Model):
 
     def __str__(self):
         return f"{self.user.email} - {self.blog.title}"
+    
+
+    
